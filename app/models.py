@@ -3,8 +3,8 @@ class News:
     News class to define news Objects
     '''
 
-    def __init__(self,newsid,name,description,url,category,language,country):
-        self.id =newsid
+    def __init__(self,id,name,description,url,category,language,country):
+        self.id = id
         self.name = name
         self.description = description
         self.url = url
@@ -17,16 +17,16 @@ class Articles:
 
     all_Articles = []
 
-    def __init__(self, author,name,news_id,title,description,urlToImage,url,publishedAt,content):
-        self.news_id =news_id
+    def __init__(self,author,name,id,title,description,urlToImage,url,publishedAt,content):
+        self.id = id
         self.name = name
         self.author = author  
         self.title = title
-        self.description =description
+        self.description = description
         self.url = url
-        self.urlToImage=urlToImage
-        self.publishedAt=publishedAt
-        self.content=content
+        self.urlToImage = urlToImage
+        self.publishedAt = publishedAt
+        self.content = content
 
     def save_Articles(self):
         Articles.all_Articles.append(self)
