@@ -5,13 +5,10 @@ from .models import news
 News = news.News
 Article = news.Article
 
-base_url = None
-sources_url = None
 
-def configure_request(app):
-    global base_url,sources_url
-    base_url = app.config["ARTICLE_API_BASE_URL"]
-    sources_url = app.config['NEWS_SOURCES']
+
+base_url = app.config["ARTICLE_API_BASE_URL"]
+sources_url = app.config['NEWS_SOURCES']
     
 
 def get_news():
