@@ -1,12 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
 
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
 
-<div class="source">
-{%for news in News%}
-<a href="/news/{{news.id}}">
- <p>{{news.name}}</p>   
-</a>
+<body>
+    <div class="container">
+        {% for news in sources %}
+         
+        
 
+        <a href="/articles/{{news.id|truncate(10)}}">
+            <p>{{news.name}}</p>
+            <p>{{news.url}}</p>
+            <p>{{news.category}}</p>
+            <p>{{news.country}}</p>
+            <p>{{news.language}}</p>
+        </a>
+        {% endfor %}
+    </div>
+</body>
 
-
-{%endfor%}
-</div>
+</html>
